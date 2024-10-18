@@ -936,6 +936,16 @@ class RTTR_API variant
          */
         uint64_t to_uint64(bool *ok = nullptr) const;
 
+        /*!
+         * \brief Returns a pointer to the underlying data.
+         *        This will return
+         *
+         * \remark You do not have to use this method directly.
+         *
+         * \return Raw void pointer.
+         */
+        RTTR_INLINE void* get_raw_ptr() const;
+
     private:
         /////////////////////////////////////////////////////////////////////////////////
 
@@ -957,16 +967,6 @@ class RTTR_API variant
          * \return Type object.
          */
         RTTR_INLINE type get_raw_type() const;
-
-        /*!
-         * \brief Returns a pointer to the underlying data.
-         *        This will return
-         *
-         * \remark You do not have to use this method directly.
-         *
-         * \return Raw void pointer.
-         */
-        RTTR_INLINE void* get_raw_ptr() const;
 
         //! Helper function to initialize all arithmetic types
         template<typename T>
