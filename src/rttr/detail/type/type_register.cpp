@@ -1077,6 +1077,13 @@ variant type_register_private::get_metadata(const type& t, const variant& key)
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
+variant type_register_private::get_metadata(const type& t)
+{
+    return variant(t.m_type_data->get_metadata());
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
 variant type_register_private::get_metadata(const variant& key, const std::vector<metadata>& data)
 {
     auto itr = std::lower_bound(data.cbegin(), data.cend(), key, metadata::order_by_key());

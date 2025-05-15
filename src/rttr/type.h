@@ -599,6 +599,11 @@ class RTTR_API type
          */
         variant get_metadata(const variant& key) const;
 
+        /*
+        * \brief Returns all registered meta data for type.
+        */
+        variant get_metadata() const;
+
         /*!
          * \brief Returns a public constructor whose parameters match the types in the specified list.
          *

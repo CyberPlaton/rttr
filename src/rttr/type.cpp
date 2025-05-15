@@ -192,6 +192,13 @@ variant type::get_metadata(const variant& key) const
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
+variant type::get_metadata() const
+{
+    return detail::type_register_private::get_metadata(*this);
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
 variant type::create(vector<argument> args) const
 {
     auto& ctors = m_type_data->m_class_data.m_ctors;

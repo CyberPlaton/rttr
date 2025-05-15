@@ -123,6 +123,7 @@ public:
     const type_comparator_base* get_less_than_comparator(const type& t);
 
     /////////////////////////////////////////////////////////////////////////////////////
+    static variant get_metadata(const type& t);
     static variant get_metadata(const type& t, const variant& key);
     static variant get_metadata(const variant& key, const std::vector<metadata>& data);
     /////////////////////////////////////////////////////////////////////////////////////
